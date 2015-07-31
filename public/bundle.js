@@ -48,7 +48,7 @@
 
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(157);
-	var routes = __webpack_require__(196);
+	var routes = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./config/routes\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	Router.run(routes, function (Root) {
 	  React.render(React.createElement(Root, null), document.getElementById('app'));
@@ -23539,84 +23539,6 @@
 	}
 
 	module.exports = runRouter;
-
-/***/ },
-/* 196 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var Main = __webpack_require__(198);
-	var Home = __webpack_require__(199);
-	var Router = __webpack_require__(157);
-	var DefaultRoute = Router.DefaultRoute;
-	var Route = Router.Route;
-
-	module.exports = React.createElement(
-	  Route,
-	  { name: 'app', path: '/', handler: Main },
-	  React.createElement(DefaultRoute, { handler: Home })
-	);
-
-/***/ },
-/* 197 */,
-/* 198 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var RouteHandler = __webpack_require__(157).RouteHandler;
-
-	var Main = React.createClass({
-	  displayName: 'Main',
-
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      { className: 'main-container' },
-	      React.createElement(
-	        'nav',
-	        { className: 'navbar navbar-default', role: 'navigation' },
-	        React.createElement(
-	          'div',
-	          { className: 'col-sm-7 col-sm-offset-2', style: { marginTop: 15 } },
-	          'MENU'
-	        )
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'container' },
-	        React.createElement(RouteHandler, null)
-	      )
-	    );
-	  }
-	});
-
-	module.exports = Main;
-
-/***/ },
-/* 199 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(1);
-
-	var Home = React.createClass({
-	  displayName: "Home",
-
-	  render: function render() {
-	    return React.createElement(
-	      "h2",
-	      { className: "text-center" },
-	      "Search by Github Username Above"
-	    );
-	  }
-	});
-
-	module.exports = Home;
 
 /***/ }
 /******/ ]);
